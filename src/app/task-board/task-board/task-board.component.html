@@ -1,0 +1,19 @@
+<div class="container">
+  <tb-tasks-quick-add></tb-tasks-quick-add>
+
+  <div class="row">
+    <div class="col-4" #todoDiv>
+      <tb-tasks-list [typeOfList]="'todo'"></tb-tasks-list>
+    </div>
+    <div class="col-4" #doingDiv>
+      <tb-tasks-list [typeOfList]="'inProgress'"></tb-tasks-list>
+    </div>
+    <div class="col-4" #completedDiv>
+      <tb-tasks-list [typeOfList]="'completed'"></tb-tasks-list>
+    </div>
+  </div>
+</div>
+
+
+
+

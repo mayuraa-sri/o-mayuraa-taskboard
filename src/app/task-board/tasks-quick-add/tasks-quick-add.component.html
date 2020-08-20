@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="card border-dark mb-3" style="max-width: 20rem;">
+    <div class="card-header">Task quick add</div>
+    <div class="card-body text-dark">
+      <h5 class="card-title">Create a new Task</h5>
+      <div class="card-text">
+        <form [formGroup]="formGroupQuickAdd">
+          <div class="form-group">
+            <input type="text" class="form-control" id="titleText" placeholder="Title" formControlName="title">
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" id="taskText" placeholder="Text" formControlName="text">
+          </div>
+
+          <button type="button" class="btn btn-primary" #submitButton [disabled]="!formGroupQuickAdd.valid">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

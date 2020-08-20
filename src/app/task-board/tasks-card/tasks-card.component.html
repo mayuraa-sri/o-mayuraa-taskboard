@@ -1,0 +1,17 @@
+<div class="container myDiv" tbDragAndDrop>
+  <div class="card text-white bg-primary m-1" style="max-width: 18rem;" *ngIf="task">
+    <div class="card-header">
+      <div class="row">
+        <div class="col-auto">
+          {{task.title}}
+        </div>
+        <div class="col-auto ml-auto">
+          <button type="button" class="btn btn-sm btn-danger" (click)="deleteTask(task.guid)">x</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{task.text}}</p>
+    </div>
+  </div>
+</div>

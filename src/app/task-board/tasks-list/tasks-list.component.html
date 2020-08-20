@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="card"  style="min-height: 100px">
+    <div class="card-header">
+      <h4 *ngIf="listTitle">{{listTitle}}  {{updateView | json}}</h4>
+    </div>
+
+    <ng-container *ngIf="(tasksList$ | async) as taskList">
+      <div *ngIf="taskList && taskList.length > 0; else noTasks">
+        <div *ngFor="let task of taskList">
+          <tb-tasks-card [task]="task"></tb-tasks-card>
+        </div>
+      </div>
+      <ng-template #noTasks>
+        <div class="alert alert-primary m-1" role="alert">
+          No Tasks
+        </div>
+      </ng-template>
+    </ng-container>
+  </div>
+</div>
+
+
+
